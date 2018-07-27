@@ -117,7 +117,7 @@ def test_timelines(client):
     register_and_login(client, 'bar', 'default')
     add_message(client, 'the message by bar')
     rv = client.get('/public')
-    assert b'the message by foo' in rv.data
+    assert b'the message by fooXXX' in rv.data
     assert b'the message by bar' in rv.data
 
     # bar's timeline should just show bar's message
